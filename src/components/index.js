@@ -8,7 +8,6 @@ export default function Index()
 {
     const [data,setData]= useState([]);
     const [text,setText]= useState([]);
-    // const [deleteData,setDeleteData]= useState([]);
     const [count,setCount]= useState(0);
     const [id,setId]= useState(0);
 
