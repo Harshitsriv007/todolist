@@ -25,20 +25,20 @@ export default function Index()
     const dataCollect=(e)=>{
                     setText({
                         ...text,
-                        [e.target.name]: e.target.value.trim(),
-                        'id':id
+                        'id':id,
+                        [e.target.name]: e.target.value.trim()
                     });
     }
     const handleDelete=(deleteId)=>
     {
+        var array=[];
         data.map((dataSet)=>{
-                setText({
-                    'id':dataSet.id,
-                    'Input':dataSet.Input
-                })
+            if(dataSet.id !== deleteId)
+            {
+                array.push(dataSet);
+            }
         })
-        clearState();
-        setData([text]);
+        setData(array);
 
     }
     return <>
