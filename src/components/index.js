@@ -11,12 +11,6 @@ export default function Index()
     const [count,setCount]= useState(0);
     const [id,setId]= useState(0);
 
-    const clearState = () =>
-    {
-        setText([]);
-        setData([]);
-    }
-
     const submitdata=()=>{
         setData([...data,text]);
         setCount(count+1);
